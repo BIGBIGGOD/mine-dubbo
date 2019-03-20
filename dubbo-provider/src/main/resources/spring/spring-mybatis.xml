@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <!--配置mybatis属性-->
+  <settings>
+    <setting name="cacheEnabled" value="false"/>
+    <setting name="lazyLoadingEnabled" value="true"/>
+    <setting name="multipleResultSetsEnabled" value="true"/>
+    <setting name="useColumnLabel" value="true"/>
+    <setting name="useGeneratedKeys" value="false"/>
+    <setting name="autoMappingBehavior" value="PARTIAL"/>
+    <setting name="defaultExecutorType" value="SIMPLE"/>
+    <setting name="defaultStatementTimeout" value="25"/>
+    <setting name="safeRowBoundsEnabled" value="false"/>
+    <setting name="mapUnderscoreToCamelCase" value="true"/>
+    <setting name="localCacheScope" value="SESSION"/>
+    <setting name="jdbcTypeForNull" value="OTHER"/>
+    <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+    <setting name="logImpl" value="SLF4J"/>
+  </settings>
+  <!--配置别名-->
+  <typeAliases>
+    <package name="com.mine.provider"/>
+    <!--<typeAlias alias="ActionCountMapTypeHandler" type="com.facishare.mankeep.common.typehandlers.ActionCountMapTypeHandler"/>-->
+  </typeAliases>
+  <!--配置类型转换-->
+  <typeHandlers>
+    <!--<typeHandler handler="ActionCountMapTypeHandler" javaType="com.facishare.marketing.common.typehandlers.value.ActionCountMap"/>-->
+  </typeHandlers>
+  <!--mybatis中的plugin其实就是个interceptor， 它可以拦截Executor 、ParameterHandler 、ResultSetHandler 、StatementHandler 的部分方法-->
+  <!--<plugins>-->
+    <!--<plugin interceptor="com.github.mybatis.interceptor.MasterSlaveInterceptor"/>-->
+  <!--</plugins>-->
+</configuration>
