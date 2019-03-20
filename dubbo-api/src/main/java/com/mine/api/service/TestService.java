@@ -6,5 +6,6 @@ package com.mine.api.service;
 public interface TestService {
 
     void say();
+    int say2();
 
 }

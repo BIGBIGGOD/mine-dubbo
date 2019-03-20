@@ -17,31 +17,39 @@
   <!--快速应用默认配置方案，包括请求映射、数据绑定、读写xml/json等-->
   <mvc:annotation-driven>
     <!--消息转换器-->
-    <mvc:message-converters>
-      <!-- 去除返回字符串时的引号 -->
+    <!--<mvc:message-converters>
+      &lt;!&ndash; 去除返回字符串时的引号 &ndash;&gt;
       <bean class="org.springframework.http.converter.StringHttpMessageConverter">
-        <!--使用constructor-arg子标签，来指定构造函数的参数-->
+        &lt;!&ndash;使用constructor-arg子标签，来指定构造函数的参数&ndash;&gt;
         <constructor-arg value="UTF-8" />
-        <!-- 避免出现乱码 -->
+        &lt;!&ndash; 避免出现乱码 &ndash;&gt;
         <property name="supportedMediaTypes">
           <list>
             <value>text/plain;charset=UTF-8</value>
           </list>
         </property>
       </bean>
-    </mvc:message-converters>
+    </mvc:message-converters>-->
   </mvc:annotation-driven>
 
   <!-- 对静态资源文件的访问 -->
   <mvc:default-servlet-handler/>
 
-  <!-- 定义文件上传解析器 -->
-  <bean id="multipartResolver"
-    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-    <!-- 设定默认编码 -->
-    <property name="defaultEncoding" value="UTF-8"></property>
-    <!-- 设定文件上传的最大值10MB，10*1024*1024 -->
-    <property name="maxUploadSize" value="10485760"></property>
+  <!--视图解析器-->
+  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:order="1">
+    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    <!--<property name="contentType" value="text/html"/>-->
+    <property name="prefix" value="/WEB-INF/jsp/"/>
+    <property name="suffix" value=".jsp"/>
   </bean>
+
+  <!-- 定义文件上传解析器 -->
+  <!--<bean id="multipartResolver"
+    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    &lt;!&ndash; 设定默认编码 &ndash;&gt;
+    <property name="defaultEncoding" value="UTF-8"></property>
+    &lt;!&ndash; 设定文件上传的最大值10MB，10*1024*1024 &ndash;&gt;
+    <property name="maxUploadSize" value="10485760"></property>
+  </bean>-->
 
 </beans>

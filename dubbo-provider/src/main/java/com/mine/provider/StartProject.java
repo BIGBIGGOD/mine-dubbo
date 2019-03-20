@@ -20,8 +20,8 @@ public class StartProject {
             new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
         context.start();
         System.out.println("Provider Server Started!");
-        TestService testService = (TestService) context.getBean("testService");
-        testService.say();
+//        TestService testService = (TestService) context.getBean("testService");
+//        testService.say();
         try {
             System.in.read();
         } catch (Exception e) {
