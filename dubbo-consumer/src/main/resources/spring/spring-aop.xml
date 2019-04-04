@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+  <aop:aspectj-autoproxy/>
+
+  <!-- 用户信息拦截器 -->
+  <!--<bean id="userInterceptor" class="com.mine.consumer.controller"/>-->
+
+  <!-- 日志拦截器 -->
+  <bean id="logInterceptor" class="com.mine.consumer.interceptor.LogInterceptor"/>
+
+  <aop:config>
+    <aop:pointcut id="logMethods"
+      expression="execution(* com.mine.consumer.*.*.*(..))"/>
+    <!--<aop:pointcut id="logMethods" expression="execution(* com.facishare.mankeep.miniapp.*.*.*(..))
+    and !execution(* com.facishare.mankeep.miniapp.controller.FileController.uploadFile(..))"/>-->
+    <!--<aop:pointcut id="userMethods" expression="execution(* com.facishare.mankeep.miniapp.controller.*.*(..))"/>-->
+
+    <!--<aop:advisor order="1" pointcut-ref="userMethods" advice-ref="userInterceptor"/>-->
+    <aop:advisor order="1" pointcut-ref="logMethods" advice-ref="logInterceptor"/>
+  </aop:config>
+
+</beans>

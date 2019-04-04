@@ -23,9 +23,6 @@ public class TestController {
     @RequestMapping("/say1")
     public ModelAndView say1(ModelAndView mode) {
         log.error("你好啊1");
-        log.warn("你好啊1");
-        logger.error("你好啊2");
-        logger.warn("你好啊2");
         System.out.println("你好啊3");
         mode.setViewName("redirect:index.jsp");
         return mode;
@@ -34,8 +31,6 @@ public class TestController {
     @RequestMapping("/say2")
     public ModelAndView say2(ModelAndView mode) {
         log.info("你好啊1");
-        logger.info("你好啊2");
-        System.out.println("你好啊3");
         mode.setViewName("test");
         int i = testService.say2();
         return mode;
@@ -44,9 +39,8 @@ public class TestController {
     @RequestMapping("/say3")
     public String say3(ModelAndView mode) {
         log.info("你好啊1");
-        logger.info("你好啊2");
-        System.out.println("你好啊3");
         mode.setViewName("test");
         return "test";
     }
+
 }
