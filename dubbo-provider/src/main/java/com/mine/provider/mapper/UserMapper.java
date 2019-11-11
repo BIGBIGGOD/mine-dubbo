@@ -1,10 +1,11 @@
 package com.mine.provider.mapper;
 
-import com.mine.provider.entity.User;
+import java.util.List;
+
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.mine.provider.entity.User;
 
 /**
  * Created by jiangqd on 2019/3/13.

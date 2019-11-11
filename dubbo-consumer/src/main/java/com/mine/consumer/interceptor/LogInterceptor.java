@@ -1,8 +1,9 @@
 package com.mine.consumer.interceptor;
 
-import lombok.extern.slf4j.Slf4j;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 拦截器实现日志输出

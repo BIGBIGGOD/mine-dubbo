@@ -7,7 +7,7 @@
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
   <dubbo:application name="dubbo-consumer"/>
-  <dubbo:registry address="zookeeper://localhost:2181" />
+  <dubbo:registry address="zookeeper://106.52.169.187:2181" />
   <dubbo:consumer check="false" timeout="10000" />
 
   <dubbo:reference id="testService" interface="com.mine.api.service.TestService" timeout="10000" version="1.0"/>

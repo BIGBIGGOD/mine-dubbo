@@ -1,8 +1,9 @@
 package com.mine.provider.service;
 
+import org.springframework.stereotype.Service;
+
 import com.mine.api.service.TestService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
 /**
  * Created by jiangqd on 2019/3/13.

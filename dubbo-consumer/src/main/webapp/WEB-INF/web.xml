@@ -6,14 +6,15 @@
 
   <display-name>dubbo-consumer</display-name>
 
-  <!--<context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring/applicationContext.xml</param-value>
-  </context-param>
+<!--  此处没有业务层只有mvc，所以无需加载mybatis等配置文件，所以暂时注释-->
+<!--  <context-param>-->
+<!--    <param-name>contextConfigLocation</param-name>-->
+<!--    <param-value>classpath:spring/applicationContext.xml</param-value>-->
+<!--  </context-param>-->
 
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>-->
+<!--  <listener>-->
+<!--    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
+<!--  </listener>-->
 
   <servlet>
     <servlet-name>consumer</servlet-name>
@@ -31,6 +32,7 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
+<!--  过滤器的配置以及配置过滤的路径-->
   <!--<filter>-->
   <!--<filter-name>userFilter</filter-name>-->
   <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->

@@ -21,7 +21,7 @@
   </settings>
   <!--配置别名-->
   <typeAliases>
-    <package name="com.mine.provider"/>
+    <package name="com.mine"/>
     <!--<typeAlias alias="ActionCountMapTypeHandler" type="com.facishare.mankeep.common.typehandlers.ActionCountMapTypeHandler"/>-->
   </typeAliases>
   <!--配置类型转换-->

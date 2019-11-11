@@ -1,10 +1,11 @@
 package com.mine.provider.service;
 
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.mine.api.service.TestService;
 import com.mine.provider.BaseJunit4Test;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by jiangqd on 2019/3/14.

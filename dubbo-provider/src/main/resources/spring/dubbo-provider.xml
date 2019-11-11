@@ -9,7 +9,7 @@
   <!--应用名-->
   <dubbo:application name="dubbo-provider"/>
   <!--连接到哪个注册中心-->
-  <dubbo:registry address="zookeeper://localhost:2181"/>
+  <dubbo:registry address="zookeeper://106.52.169.187:2181"/>
   <!--用什么协议，在什么端口暴露服务--><!-- patyload指请求及响应数据包大小限制 -->
   <dubbo:protocol id="dubbo" name="dubbo" port="20880" payload="10485760"/>
   <!--当 ProtocolConfig 和 ServiceConfig 某属性没有配置时，采用该标签中的缺省值-->

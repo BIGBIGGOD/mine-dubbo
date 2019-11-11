@@ -1,13 +1,14 @@
 package com.mine.consumer.controller;
 
-import com.mine.api.service.TestService;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.mine.api.service.TestService;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by jiangqd on 2019/3/13.

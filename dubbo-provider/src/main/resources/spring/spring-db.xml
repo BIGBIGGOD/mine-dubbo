@@ -16,7 +16,7 @@ http://www.springframework.org/schema/beans ">
   <!--引入注解-->
   <!--<context:annotation-config/>-->
   <!--扫描包-->
-  <context:component-scan base-package="com.mine.provider"/>
+  <context:component-scan base-package="com.mine"/>
 
   <!--加载配置文件-->
   <bean id="propertyConfigurer"
@@ -40,7 +40,7 @@ http://www.springframework.org/schema/beans ">
     <!--<property name="username" value="${jdbc_user}"/>-->
     <!--<property name="password" value="${jdbc_password}"/>-->
     <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-    <property name="url" value="jdbc:mysql://localhost:3306/mine_demo"/>
+    <property name="url" value="jdbc:mysql://106.52.169.187:3306/mine-demo"/>
     <property name="username" value="root"/>
     <property name="password" value="root"/>
 

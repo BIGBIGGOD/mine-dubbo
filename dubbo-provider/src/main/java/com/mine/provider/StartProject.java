@@ -1,8 +1,8 @@
 package com.mine.provider;
 
-import com.mine.api.service.TestService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by jiangqd on 2019/3/14.
